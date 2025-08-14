@@ -1,95 +1,205 @@
 import { ArrowDown, ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+
+// Import images from assets folder
+import image1 from "../assets/image1.jpg";
+import image2 from "../assets/image2.jpg";
+import image3 from "../assets/image3.jpg";
+import image4 from "../assets/image4.jpg";
+import image5 from "../assets/image5.jpg";
+import image6 from "../assets/image6.jpg";
 
 export const HeroSection = () => {
+  const slideshowRef = useRef(null);
+
+  // GSAP Slideshow Animation
+  useEffect(() => {
+    const images = slideshowRef.current.querySelectorAll(".slideshow-image");
+    gsap.set(images, { opacity: 0, scale: 1.1 });
+
+    const tl = gsap.timeline({ repeat: -1 });
+    images.forEach((image, index) => {
+      tl.to(image, {
+        opacity: 1,
+        scale: 1,
+        duration: 2,
+        ease: "power2.out",
+      })
+        .to(image, {
+          opacity: 1,
+          duration: 4,
+        })
+        .to(image, {
+          opacity: 0,
+          scale: 1.1,
+          duration: 2,
+          ease: "power2.in",
+        }, `+=${index * 6}`);
+    });
+
+    return () => tl.kill(); // Cleanup on unmount
+  }, []);
+
+  // Framer Motion variants for text and button animations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const buttonVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+    hover: {
+      scale: 1.05,
+      boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
+      transition: {
+        duration: 0.3,
+      },
+    },
+  };
+
+  const scrollVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <section
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden"
     >
       {/* Background Slideshow */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0" ref={slideshowRef}>
         <div className="slideshow">
           <div
             className="slideshow-image"
             style={{
-              backgroundImage:
-                "url('https://pixabay.com/get/g31d818e0dc0a5a70443452e4b0938fd77ad53622f2489e5dadd1bcf762a81cb11871dfcff9f0d899057ca67c6ca47b400f3c33c4fa92a5c9485f4068bd1c9c5f_1280.jpg')",
+              backgroundImage: `url(${image1})`,
             }}
           ></div>
           <div
             className="slideshow-image"
             style={{
-              backgroundImage:
-                "url('https://pixabay.com/get/g1151854e1d59bd3acf328906b412a8e9dda97f82a41ef14792dcc6a301960198c67d9175947f488053959601aaa06767a20b9116a39858a05e15fbe4a8dde237_1280.jpg')",
-            }}
-          ></div>
-
-          <div
-            className="slideshow-image"
-            style={{
-              backgroundImage:
-                "url('https://pixabay.com/get/gc6c5384b4decde607debd10d158dbaed3dba9eb998e55260e89e3a6b21c2f51e8fd37ea97b85618adef4bb721484c38dc25af41cf316f5af2b131072fa164a6a_1280.jpg')",
-            }}
-          ></div>
-
-          <div
-            className="slideshow-image"
-            style={{
-              backgroundImage:
-                "url('https://pixabay.com/get/ged5ecad19eb45791274be12a16b263bbfbbe65d2930644342ed935daa48fa43baab8d8735b7fa3063b4fb6584af96093df51f02414675242303e77d685d0d992_1280.jpg')",
-            }}
-          ></div>
-
-          <div
-            className="slideshow-image"
-            style={{
-              backgroundImage:
-                "url('https://pixabay.com/get/g52b859f6f7ec3bbeaae4ddda76e53f31dfebaf39681452188a09d014e705d0daf56f77633b8f079def4b3d54958e230c_1280.jpg')",
+              backgroundImage: `url(${image2})`,
             }}
           ></div>
           <div
             className="slideshow-image"
             style={{
-              backgroundImage:
-                "url('https://pixabay.com/get/g1c563dd85488f464d598059d0d1d03c0261daf76ea50423aca975765bf31b3b85b1afadb6f5cdbc69353d527feff9b68ba4e6f38177afcbe7ca9ca9b22985464_1280.jpg')",
+              backgroundImage: `url(${image3})`,
+            }}
+          ></div>
+          <div
+            className="slideshow-image"
+            style={{
+              backgroundImage: `url(${image4})`,
+            }}
+          ></div>
+          <div
+            className="slideshow-image"
+            style={{
+              backgroundImage: `url(${image5})`,
+            }}
+          ></div>
+          <div
+            className="slideshow-image"
+            style={{
+              backgroundImage: `url(${image6})`,
             }}
           ></div>
         </div>
-        {/* Overlay for better text readability */}
+        {/* Overlay for text readability */}
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
-      <div className="container max-w-4xl mx-auto text-center z-10">
+      {/* Content */}
+      <motion.div
+        className="container max-w-4xl mx-auto text-center z-10"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <div className="space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white">
-            <span className="text-primary opacity-0 animate-[fadeIn_1s_ease-out_forwards_0.2s]">
-              Kristoni <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-amber-400">Holdings</span>
+          <motion.h1
+            className="text-4xl md:text-6xl font-bold tracking-tight text-white"
+            variants={itemVariants}
+          >
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-amber-400">
+              Kristoni Holdings
             </span>
-          </h1>
+          </motion.h1>
 
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto opacity-0 animate-[fadeInSlideUp_0.8s_ease-out_forwards_0.4s]">
+          <motion.p
+            className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto"
+            variants={itemVariants}
+          >
             Empowering communities through rentals, e-commerce, farming, and education. 
             A one-stop platform for growth, innovation, and opportunity.
-          </p>
+          </motion.p>
 
-          <div className="pt-6 opacity-0 animate-[fadeInSlideUp_0.8s_ease-out_forwards_0.6s]">
-            <a
+          <motion.div className="pt-6" variants={itemVariants}>
+            <motion.a
               href="#services"
-              className="inline-flex items-center px-6 py-3 text-lg font-bold text-white bg-primary rounded-full shadow-lg hover:bg-primary/90 hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out group"
+              className="inline-flex items-center px-6 py-3 text-lg font-bold text-white bg-primary rounded-full shadow-lg"
+              variants={buttonVariants}
+              whileHover="hover"
             >
-             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-amber-400">Explore Our Services</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-amber-400">
+                Explore Our Services
+              </span>
               <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" />
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce z-10">
+      {/* Scroll Indicator */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        variants={scrollVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <span className="text-sm text-white/80 mb-2">Scroll</span>
         <ArrowDown className="h-5 w-5 text-primary" />
-      </div>
+      </motion.div>
 
-      {/* Inline CSS for animations */}
+      {/* Inline CSS for slideshow */}
       <style jsx>{`
         .slideshow {
           position: absolute;
@@ -104,63 +214,6 @@ export const HeroSection = () => {
           background-size: cover;
           background-position: center;
           opacity: 0;
-          transform: scale(1);
-          animation: slide 18s infinite ease-in-out;
-        }
-
-        .slideshow-image:nth-child(1) {
-          animation-delay: 0s;
-        }
-
-        .slideshow-image:nth-child(2) {
-          animation-delay: 6s;
-        }
-
-        .slideshow-image:nth-child(3) {
-          animation-delay: 12s;
-        }
-
-        @keyframes slide {
-          0% {
-            opacity: 0;
-            transform: scale(1.05);
-          }
-          10% {
-            opacity: 1;
-            transform: scale(1);
-          }
-          33.33% {
-            opacity: 1;
-            transform: scale(1);
-          }
-          43.33% {
-            opacity: 0;
-            transform: scale(1.05);
-          }
-          100% {
-            opacity: 0;
-            transform: scale(1.05);
-          }
-        }
-
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
-
-        @keyframes fadeInSlideUp {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
         }
       `}</style>
     </section>
