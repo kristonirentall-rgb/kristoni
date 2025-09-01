@@ -16,7 +16,7 @@ export const AboutSection = () => {
             </h3>
 
             <p className="text-muted-foreground">
-              Kristoni Holding is a dynamic and diversified company operating across four major sectors: Rentals, E-commerce, Farming, and Education. We bring innovative and accessible solutions to individuals, businesses, and communities alike.
+              Kristoni Holdings is a dynamic and diversified company operating across four major sectors: Rentals, E-commerce, Farming, and Education. We bring innovative and accessible solutions to individuals, businesses, and communities alike.
             </p>
 
             <p className="text-muted-foreground">
@@ -63,7 +63,7 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Digital Marketplace</h4>
                   <p className="text-muted-foreground">
-                    A growing e-commerce platform where customers can shop, vendors can sell, and communities can thrive through trade.
+                    A growing e-commerce platform where customers can shop and communities can thrive through trade.
                   </p>
                 </div>
               </div>

@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 import image1 from "../assets/image1.jpeg";
 import image2 from "../assets/image2.jpeg";
 import image3 from "../assets/image3.jpeg";
-import image4 from "../assets/image4.jpeg";
+import image4 from "../assets/image4.jpg";
 import image5 from "../assets/image5.jpg";
 import image6 from "../assets/image6.jpg";
 import image7 from "../assets/image7.jpg";
@@ -170,6 +170,7 @@ export const HeroSection = () => {
               Kristoni Holdings
             </span>
           </motion.h1>
+         
 
           <motion.p
             className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto"
@@ -178,6 +179,9 @@ export const HeroSection = () => {
             Empowering communities through rentals, e-commerce, farming, and education. 
             A one-stop platform for growth, innovation, and opportunity.
           </motion.p>
+
+           <motion.h3>Christ to the world through Business Innovations and Excellence!</motion.h3>
+          
 
           <motion.div className="pt-6" variants={itemVariants}>
             <motion.a

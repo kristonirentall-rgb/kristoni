@@ -121,7 +121,7 @@ export const ContactSection = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? I'd love to hear from you.
+            Have a project in mind or want to collaborate? We would love to hear from you.
           </p>
         </motion.div>
 
@@ -136,44 +136,54 @@ export const ContactSection = () => {
             <div>
               <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>
               <p className="text-gray-300 mb-8">
-                Feel free to reach out through any of these channels. I'm always open to discussing 
+                Feel free to reach out through any of these channels. We are always open to discussing 
                 new projects, creative ideas, or opportunities to be part of your vision.
               </p>
             </div>
+{/* Contact Details */}
+<div className="space-y-6">
+  {/* Phone */}
+  <div className="flex items-start gap-4">
+    <div className="flex-shrink-0 bg-blue-500/10 p-3 rounded-full">
+      <Phone className="text-blue-400" size={20} />
+    </div>
+    <div className="min-w-0 flex-1">
+      <h4 className="text-white font-semibold text-sm md:text-base mb-1">Phone</h4>
+      <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+        +233 24 854 8141<br />
+        +66 942 545 766
+      </p>
+    </div>
+  </div>
 
-            {/* Contact Details */}
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="bg-blue-500/10 p-3 rounded-full">
-                  <Phone className="text-blue-400" size={20} />
-                </div>
-                <div>
-                  <h4 className="text-white font-medium">Phone</h4>
-                  <p className="text-gray-400">+233 24 854 8141 /+66 942 545 766</p>
-                </div>
-              </div>
+  {/* Email */}
+  <div className="flex items-start gap-4">
+    <div className="flex-shrink-0 bg-purple-500/10 p-3 rounded-full">
+      <Mail className="text-purple-400" size={20} />
+    </div>
+    <div className="min-w-0 flex-1">
+      <h4 className="text-white font-semibold text-sm md:text-base mb-1">Email</h4>
+      <p className="text-gray-300 text-sm md:text-base break-all md:break-normal">
+        kristonirentall@gmail.com
+      </p>
+    </div>
+  </div>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-purple-500/10 p-3 rounded-full">
-                  <Mail className="text-purple-400" size={20} />
-                </div>
-                <div>
-                  <h4 className="text-white font-medium">Email</h4>
-                  <p className="text-gray-400">kristonirentall@gmail.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="bg-green-500/10 p-3 rounded-full">
-                  <MapPin className="text-green-400" size={20} />
-                </div>
-                <div>
-                  <h4 className="text-white font-medium">Location</h4>
-                  <p className="text-gray-400">HNO. 44, Arthur's Mansion, Bort 261 St. Aplaku, Ga South, Greater Accra</p>
-                </div>
-              </div>
-            </div>
-
+  {/* Location */}
+  <div className="flex items-start gap-4">
+    <div className="flex-shrink-0 bg-green-500/10 p-3 rounded-full">
+      <MapPin className="text-green-400" size={20} />
+    </div>
+    <div className="min-w-0 flex-1">
+      <h4 className="text-white font-semibold text-sm md:text-base mb-1">Location</h4>
+      <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+        HNO. 44, Arthur's Mansion<br />
+        Bort 261 St. Aplaku<br />
+        Ga South, Greater Accra
+      </p>
+    </div>
+  </div>
+</div>
             {/* Social Links */}
             <div>
               <h4 className="text-white font-medium mb-4">Follow Me</h4>
