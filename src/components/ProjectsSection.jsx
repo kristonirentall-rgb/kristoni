@@ -65,7 +65,7 @@ export const sectors = [
       dimensions: "18W x 18D x 32H inches",
       features: ["Foldable", "Non-slip feet", "Lightweight (8 lbs)"],
     },
-    pricing: "₵5.00 per chair/day and ₵3.00 for rentals above 50 chairs",
+    pricing: "₵5.00 for fanbackchair /day and ₵3.50 for plastic chairs. ₵3.00 for rentals above 50 chairs",
     availability: "100 units available",
   },
   {
