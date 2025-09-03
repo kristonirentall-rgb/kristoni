@@ -65,8 +65,8 @@ export const sectors = [
       dimensions: "18W x 18D x 32H inches",
       features: ["Foldable", "Non-slip feet", "Lightweight (8 lbs)"],
     },
-    pricing: "₵3.50 per chair/day and ₵3.00 for rentals above 50 chairs",
-    availability: "1000 units available",
+    pricing: "₵5.00 per chair/day and ₵3.00 for rentals above 50 chairs",
+    availability: "100 units available",
   },
   {
     id: 2,
@@ -326,13 +326,13 @@ const DetailsModal = ({ isOpen, onClose, item }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative p-6">
-              <button
-                onClick={onClose}
-                className="absolute top-4 right-4 p-2 text-foreground/60 hover:text-foreground rounded-full hover:bg-primary/10 transition-colors"
-                aria-label="Close modal"
-              >
-                <X size={24} />
-              </button>
+             <button
+  onClick={onClose}
+  className="absolute top-4 right-4 p-2 text-red-500 hover:text-red-500 rounded-full hover:bg-red-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-300"
+  aria-label="Close modal"
+>
+  <X size={24} />
+</button>
 
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="md:w-1/2">
