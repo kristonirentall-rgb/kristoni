@@ -20,11 +20,99 @@ import home3 from '../assets/home3.jpg';
 import fashion1 from '../assets/fashion1.jpeg';
 import fashion2 from '../assets/fashion2.jpeg';
 import fashion3 from '../assets/fashion3.jpeg';
+
+
+import fashion4 from '../assets/fashion4.jpeg';
+import fashion5 from '../assets/fashion5.jpeg';
+import fashion6 from '../assets/fashion6.jpeg';
+import fashion7 from '../assets/fashion7.jpeg';
+import fashion8 from '../assets/fashion8.jpeg';
+import fashion9 from '../assets/fashion9.jpeg';
+import fashion10 from '../assets/fashion10.JPG';
+
+import fashion11 from '../assets/fashion11.JPG';
+import fashion12 from '../assets/fashion12.JPG';
+import fashion13 from '../assets/fashion13.JPG';
+import fashion14 from '../assets/fashion14.JPG';
+import fashion15 from '../assets/fashion15.JPG';
+import fashion16 from '../assets/fashion16.JPG';
+import fashion17 from '../assets/fashion17.JPG';
+import fashion18 from '../assets/fashion18.JPG';
+import fashion19 from '../assets/fashion19.JPG';
+import fashion20 from '../assets/fashion20.JPG';
+
+import fashion21 from '../assets/fashion21.JPG';
+import fashion22 from '../assets/fashion22.JPG';
+import fashion23 from '../assets/fashion23.JPG';
+import fashion24 from '../assets/fashion24.JPG';
+import fashion25 from '../assets/fashion25.JPG';
+import fashion26 from '../assets/fashion26.JPG';
+import fashion27 from '../assets/fashion27.JPG';
+import fashion28 from '../assets/fashion28.JPG';
+import fashion29 from '../assets/fashion29.JPG';
+import fashion30 from '../assets/fashion30.JPG';
+
+
+import fashion31 from '../assets/fashion31.JPG';
+import fashion32 from '../assets/fashion32.JPG';
+import fashion33 from '../assets/fashion33.JPG';
+import fashion34 from '../assets/fashion34.JPG';
+import fashion35 from '../assets/fashion35.JPG';
+import fashion36 from '../assets/fashion36.JPG';
+import fashion37 from '../assets/fashion37.JPG';
+import fashion38 from '../assets/fashion38.JPG';
+import fashion39 from '../assets/fashion39.JPG';
+import fashion40 from '../assets/fashion40.JPG';
+
+import fashion41 from '../assets/fashion41.JPG';
+import fashion42 from '../assets/fashion42.JPG';
+import fashion43 from '../assets/fashion43.JPG';
+import fashion44 from '../assets/fashion44.JPG';
+import fashion45 from '../assets/fashion45.JPG';
+import fashion46 from '../assets/fashion46.JPG';
+import fashion47 from '../assets/fashion47.JPG';
+import fashion48 from '../assets/fashion48.JPG';
+import fashion49 from '../assets/fashion49.JPG';
+import fashion50 from '../assets/fashion50.JPG';
+
+import fashion51 from '../assets/fashion51.JPG';
+import fashion52 from '../assets/fashion52.JPG';
+import fashion53 from '../assets/fashion53.JPG';
+import fashion54 from '../assets/fashion54.JPG';
+import fashion55 from '../assets/fashion55.JPG';
+import fashion56 from '../assets/fashion56.JPG';
+import fashion57 from '../assets/fashion57.JPG';
+import fashion58 from '../assets/fashion58.JPG';
+import fashion59 from '../assets/fashion59.JPG';
+import fashion60 from '../assets/fashion60.JPG';
+
+import fashion61 from '../assets/fashion61.JPG';
+import fashion62 from '../assets/fashion62.JPG';
+import fashion63 from '../assets/fashion63.JPG';
+import fashion64 from '../assets/fashion64.JPG';
+import fashion65 from '../assets/fashion65.JPG';
+import fashion66 from '../assets/fashion66.JPG';
+import fashion67 from '../assets/fashion67.JPG';
+import fashion68 from '../assets/fashion68.JPG';
+import fashion69 from '../assets/fashion69.JPG';
+import fashion70 from '../assets/fashion70.JPG';
+
+import fashion71 from '../assets/fashion71.JPG';
+import fashion72 from '../assets/fashion72.JPG';
+import fashion73 from '../assets/fashion73.JPG';
+import fashion74 from '../assets/fashion74.JPG';
+import fashion75 from '../assets/fashion75.JPG';
+
+
+
+
+
+
 import detergent1 from '../assets/detergent1.JPG';
-import detergent2 from '../assets/detergent2.JPG';
-import detergent3 from '../assets/detergent3.JPG';
-import detergent4 from '../assets/detergent4.JPG';
-import detergent5 from '../assets/detergent5.JPG';
+import detergent2 from '../assets/detergent2.jpeg';
+import detergent3 from '../assets/detergent3.jpg';
+import detergent4 from '../assets/detergent4.jpg';
+
 
 
 import produce1 from '../assets/produce1.jpg';
@@ -141,7 +229,7 @@ export const sectors = [
     sector: "E-Commerce",
     title: "Fashion Boutique",
     description: "Trendy clothing and accessories for all. Fresh styles arriving weekly.",
-    images: [fashion1, fashion2, fashion3],
+    images: [fashion1, fashion2, fashion3 , fashion4, fashion5, fashion6, fashion7, fashion8, fashion9, fashion10,fashion11, fashion12, fashion13 , fashion14, fashion15, fashion16, fashion17, fashion18, fashion19, fashion20, fashion21, fashion22, fashion23 , fashion24, fashion25, fashion26, fashion27, fashion28, fashion29, fashion30, fashion31, fashion32, fashion33 , fashion34, fashion35, fashion36, fashion37, fashion38, fashion39, fashion40, fashion41, fashion42, fashion43 , fashion44, fashion45, fashion46, fashion47, fashion48, fashion49, fashion50, fashion51, fashion52, fashion53 , fashion54, fashion55, fashion56, fashion57, fashion58, fashion59, fashion60, fashion61, fashion62, fashion63 , fashion64, fashion65, fashion66, fashion67, fashion68, fashion69, fashion70 , fashion71, fashion72, fashion73 , fashion74, fashion75],
     tags: ["Apparel", "Style", "Trends"],
     demoUrl: "#",
     colorClass: "bg-purple-100 text-purple-800",
@@ -158,7 +246,7 @@ export const sectors = [
   sector: "E-Commerce",
   title: "Laundry Essentials",
   description: "High-quality detergents, softeners, and cleaning cloths for a fresh and spotless finish.",
-  images: [detergent1, detergent2, detergent3, detergent4, detergent5, ],
+  images: [detergent1, detergent2, detergent3, detergent4 ],
   tags: ["Cleaning", "Laundry", "Home Care"],
   demoUrl: "#",
   colorClass: "bg-blue-100 text-blue-800",
