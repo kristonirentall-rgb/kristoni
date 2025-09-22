@@ -244,7 +244,7 @@ export const sectors = [
   sector: "E-Commerce",
   title: "Laundry Essentials",
   description: "High-quality detergents, softeners, and cleaning cloths for a fresh and spotless finish.",
-  images: [detergent1, detergent2, detergent3, detergent4 ],
+  images: [detergent1, detergent2 ],
   tags: ["Cleaning", "Laundry", "Home Care"],
   demoUrl: "#",
   colorClass: "bg-blue-100 text-blue-800",
