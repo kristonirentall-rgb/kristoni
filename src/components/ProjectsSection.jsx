@@ -110,8 +110,6 @@ import fashion75 from '../assets/fashion75.JPG';
 
 import detergent1 from '../assets/detergent1.JPG';
 import detergent2 from '../assets/detergent2.jpeg';
-import detergent3 from '../assets/detergent3.jpg';
-import detergent4 from '../assets/detergent4.jpg';
 
 
 
